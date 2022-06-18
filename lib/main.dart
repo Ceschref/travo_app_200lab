@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:travo_app_source/representation/screen/slpash_screen.dart';
+import 'package:travo_app_source/routes.dart';
+
+import 'core/helpers/size_config.dart';
+
+void main() {
+  runApp(const TravoApp());
+}
+
+class TravoApp extends StatelessWidget {
+  const TravoApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Travo App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: routes,
+      debugShowCheckedModeBanner: false,
+      home: Builder(
+        builder: (context) {
+          SizeConfig.init(context);
+          return const SplashScreen();
+        },
+      ),
+    );
+  }
+}
