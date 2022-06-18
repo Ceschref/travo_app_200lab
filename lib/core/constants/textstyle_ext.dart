@@ -79,7 +79,7 @@ class TextStyles {
 
   BuildContext? context;
 
-  static const TextStyle _defaultStyle = TextStyle(
+  static const TextStyle defaultStyle = TextStyle(
     fontSize: 14,
     color: ColorPalette.text1Color,
     fontWeight: FontWeight.w400,
