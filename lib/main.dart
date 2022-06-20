@@ -25,7 +25,6 @@ class TravoApp extends StatelessWidget {
         builder: (context) {
           SizeConfig.init(context);
           final ignoreIntro = LocalStorageHelper.getValue('ignoreIntro') as bool?;
-
           return const SplashScreen();
         },
       ),

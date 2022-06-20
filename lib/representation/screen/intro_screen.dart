@@ -6,6 +6,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travo_app_source/core/constants/constants.dart';
 import 'package:travo_app_source/core/constants/textstyle_ext.dart';
 import 'package:travo_app_source/core/helpers/asset_helper.dart';
+import 'package:travo_app_source/representation/screen/main_app.dart';
 import 'package:travo_app_source/representation/widgets/item_intro_widget.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -100,6 +101,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 GestureDetector(
                   onTap: () {
                     if (_pageController.page == 2) {
+                      Navigator.of(context).pushNamed(MainApp.routeName);
                     } else {
                       _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeIn);
                     }

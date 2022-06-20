@@ -36,28 +36,12 @@ extension ExtendedTextStyle on TextStyle {
     return copyWith(color: ColorPalette.text1Color);
   }
 
-  TextStyle get text2Color {
-    return copyWith(color: ColorPalette.text2Color);
-  }
-
-  TextStyle get text3Color {
-    return copyWith(color: ColorPalette.text3Color);
-  }
-
-  TextStyle get text4Color {
-    return copyWith(color: ColorPalette.text4Color);
-  }
-
   TextStyle get textErrorColor {
-    return copyWith(color: ColorPalette.primary1Color);
-  }
-
-  TextStyle get lightTextColor {
-    return copyWith(color: ColorPalette.lightTextColor);
+    return copyWith(color: ColorPalette.textErrorColor);
   }
 
   TextStyle get primaryTextColor {
-    return copyWith(color: ColorPalette.secondaryColor);
+    return copyWith(color: ColorPalette.text1Color);
   }
 
   TextStyle get whiteTextColor {
