@@ -4,6 +4,7 @@ import 'package:travo_app_source/core/constants/color_palatte.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../core/constants/constants.dart';
+import 'home_screen.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       bottomNavigationBar: SalomonBottomBar(
         currentIndex: _currentIndex,
         onTap: (i) => setState(
@@ -28,7 +30,7 @@ class _MainAppState extends State<MainApp> {
         selectedItemColor: ColorPalette.primaryColor,
         unselectedItemColor: ColorPalette.primaryColor.withOpacity(0.2),
         selectedColorOpacity: 0.2,
-        margin: EdgeInsets.symmetric(horizontal: kMediumPadding),
+        margin: EdgeInsets.symmetric(horizontal: kMediumPadding, vertical: kDefaultPadding),
         items: [
           SalomonBottomBarItem(
             icon: Icon(
@@ -58,6 +60,15 @@ class _MainAppState extends State<MainApp> {
             ),
             title: Text("Profile"),
           ),
+        ],
+      ),
+      body: IndexedStack(
+        index: 0,
+        children: [
+          HomeScreen(),
+          Container(),
+          Container(),
+          Container(),
         ],
       ),
     );

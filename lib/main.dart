@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travo_app_source/core/constants/color_palatte.dart';
 import 'package:travo_app_source/core/helpers/local_storage_helper.dart';
 import 'package:travo_app_source/representation/screen/slpash_screen.dart';
 import 'package:travo_app_source/routes.dart';
@@ -18,6 +19,8 @@ class TravoApp extends StatelessWidget {
       title: 'Travo App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: ColorPalette.backgroundScaffoldColor,
+        backgroundColor: ColorPalette.backgroundScaffoldColor,
       ),
       routes: routes,
       debugShowCheckedModeBanner: false,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:travo_app_source/core/constants/constants.dart';
 import 'package:travo_app_source/core/constants/textstyle_ext.dart';
 import 'package:travo_app_source/core/helpers/image_helper.dart';
@@ -24,7 +23,7 @@ class ItemIntroWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
+        Container( 
           alignment: aligment,
           child: ImageHelper.loadFromAsset(
             sourceImage,

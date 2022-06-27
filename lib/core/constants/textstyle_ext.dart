@@ -23,6 +23,19 @@ extension ExtendedTextStyle on TextStyle {
     return copyWith(fontWeight: FontWeight.w500);
   }
 
+  TextStyle get fontHeader {
+    return copyWith(
+      fontSize: 22,
+      height: 22 / 20,
+    );
+  }
+  TextStyle get fontCaption {
+    return copyWith(
+      fontSize: 12,
+      height: 12 / 10,
+    );
+  }
+
   TextStyle get semibold {
     return copyWith(fontWeight: FontWeight.w600);
   }

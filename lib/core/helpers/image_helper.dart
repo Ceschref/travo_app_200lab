@@ -88,28 +88,6 @@ class ImageHelper {
     }
   }
 
-  static Widget loadIconFromAsset(
-    String imageFilePath, {
-    double? width = 18,
-    double? height = 18,
-    double? radius,
-    BoxFit? fit,
-    Color? tintColor,
-    Alignment? alignment,
-  }) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(radius ?? 0),
-      child: Image.asset(
-        imageFilePath,
-        width: width,
-        height: height,
-        fit: fit ?? BoxFit.contain,
-        color: tintColor,
-        alignment: alignment ?? Alignment.center,
-      ),
-    );
-  }
-
   // static Widget loadFromCamera({
   //   double? width,
   //   double? height,

@@ -28,22 +28,20 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        children: [
-          Positioned.fill(
-            child: ImageHelper.loadFromAsset(
-              AssetHelper.backgroundSplash,
-              fit: BoxFit.fitWidth,
-            ),
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: ImageHelper.loadFromAsset(
+            AssetHelper.backgroundSplash,
+            fit: BoxFit.fitWidth,
           ),
-          Positioned.fill(
-            child: ImageHelper.loadFromAsset(
-              AssetHelper.circleSplash,
-            ),
+        ),
+        Positioned.fill(
+          child: ImageHelper.loadFromAsset(
+            AssetHelper.circleSplash,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

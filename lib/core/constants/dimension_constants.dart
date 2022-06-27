@@ -7,6 +7,6 @@ const double kItemPadding = 10.0; // default padding between child widgets
 const double kMinPadding = 5.0; // minimum default padding
 const double kTopPadding = 8.0; // default top padding
 
-const int kDefaultPageSize = 15;
+const double kDefaultIconSize = 18;
 
 const BorderRadius kDefaultBorderRadius = BorderRadius.all(Radius.circular(8));
