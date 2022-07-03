@@ -24,6 +24,7 @@ class TravoApp extends StatelessWidget {
       ),
       routes: routes,
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: generateRoutes,
       home: Builder(
         builder: (context) {
           SizeConfig.init(context);

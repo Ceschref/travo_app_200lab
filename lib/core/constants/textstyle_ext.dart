@@ -29,6 +29,7 @@ extension ExtendedTextStyle on TextStyle {
       height: 22 / 20,
     );
   }
+
   TextStyle get fontCaption {
     return copyWith(
       fontSize: 12,
@@ -54,11 +55,15 @@ extension ExtendedTextStyle on TextStyle {
   }
 
   TextStyle get primaryTextColor {
-    return copyWith(color: ColorPalette.text1Color);
+    return copyWith(color: ColorPalette.primaryColor);
   }
 
   TextStyle get whiteTextColor {
     return copyWith(color: Colors.white);
+  }
+
+  TextStyle get subTitleTextColor {
+    return copyWith(color: ColorPalette.subTitleColor);
   }
 
   // convenience functions

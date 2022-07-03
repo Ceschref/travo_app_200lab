@@ -79,87 +79,82 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       implementLeading: false,
-      child: Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: kMediumPadding,
-        ),
-        child: Column(
-          children: [
-            TextField(
-              enabled: true,
-              autocorrect: false,
-              decoration: InputDecoration(
-                hintText: 'Search your destination',
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    FontAwesomeIcons.magnifyingGlass,
-                    color: Colors.black,
-                    size: 14,
-                  ),
+      child: Column(
+        children: [
+          TextField(
+            enabled: true,
+            autocorrect: false,
+            decoration: InputDecoration(
+              hintText: 'Search your destination',
+              prefixIcon: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  color: Colors.black,
+                  size: 14,
                 ),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      kItemPadding,
-                    ),
-                  ),
-                ),
-                contentPadding: const EdgeInsets.symmetric(horizontal: kItemPadding),
               ),
-              style: TextStyles.defaultStyle,
-              onChanged: (value) {},
-              onSubmitted: (String submitValue) {},
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(
+                    kItemPadding,
+                  ),
+                ),
+              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: kItemPadding),
             ),
-            SizedBox(
-              height: kDefaultPadding,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: _buildItemCategory(
-                    ImageHelper.loadFromAsset(
-                      AssetHelper.icoHotel,
-                      width: kDefaultIconSize,
-                      height: kDefaultIconSize,
-                    ),
-                    Color(0xffFE9C5E),
-                    () {
-                      Navigator.of(context).pushNamed(HotelBookingScreen.routeName);
-                    },
+            style: TextStyles.defaultStyle,
+            onChanged: (value) {},
+            onSubmitted: (String submitValue) {},
+          ),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: _buildItemCategory(
+                  ImageHelper.loadFromAsset(
+                    AssetHelper.icoHotel,
+                    width: kDefaultIconSize,
+                    height: kDefaultIconSize,
                   ),
+                  Color(0xffFE9C5E),
+                  () {
+                    Navigator.of(context).pushNamed(HotelBookingScreen.routeName);
+                  },
                 ),
-                SizedBox(width: kDefaultPadding),
-                Expanded(
-                  child: _buildItemCategory(
-                    ImageHelper.loadFromAsset(
-                      AssetHelper.icoPlane,
-                      width: kDefaultIconSize,
-                      height: kDefaultIconSize,
-                    ),
-                    Color(0xffF77777),
-                    () {},
+              ),
+              SizedBox(width: kDefaultPadding),
+              Expanded(
+                child: _buildItemCategory(
+                  ImageHelper.loadFromAsset(
+                    AssetHelper.icoPlane,
+                    width: kDefaultIconSize,
+                    height: kDefaultIconSize,
                   ),
+                  Color(0xffF77777),
+                  () {},
                 ),
-                SizedBox(width: kDefaultPadding),
-                Expanded(
-                  child: _buildItemCategory(
-                    ImageHelper.loadFromAsset(
-                      AssetHelper.icoHotelPlane,
-                      width: kDefaultIconSize,
-                      height: kDefaultIconSize,
-                    ),
-                    Color(0xff3EC8BC),
-                    () {},
+              ),
+              SizedBox(width: kDefaultPadding),
+              Expanded(
+                child: _buildItemCategory(
+                  ImageHelper.loadFromAsset(
+                    AssetHelper.icoHotelPlane,
+                    width: kDefaultIconSize,
+                    height: kDefaultIconSize,
                   ),
+                  Color(0xff3EC8BC),
+                  () {},
                 ),
-              ],
-            )
-          ],
-        ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

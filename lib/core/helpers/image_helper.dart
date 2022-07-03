@@ -56,14 +56,14 @@ class ImageHelper {
     String imageFilePath, {
     double? width,
     double? height,
-    double? radius,
+    BorderRadius? radius,
     BoxFit? fit,
     Color? tintColor,
     Alignment? alignment,
   }) {
     if (imageFilePath.toLowerCase().endsWith('svg')) {
       return ClipRRect(
-        borderRadius: BorderRadius.circular(radius ?? 0),
+        borderRadius: radius ?? BorderRadius.zero,
         child: SvgPicture.asset(
           imageFilePath,
           width: width,
@@ -75,7 +75,7 @@ class ImageHelper {
       );
     } else {
       return ClipRRect(
-        borderRadius: BorderRadius.circular(radius ?? 0),
+        borderRadius: radius ?? BorderRadius.zero,
         child: Image.asset(
           imageFilePath,
           width: width,
