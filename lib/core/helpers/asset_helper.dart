@@ -10,6 +10,16 @@ mixin AssetHelper {
   static const String icoLocation = 'assets/icons/ico_location.png';
   static const String icoLocationBlank = 'assets/icons/ico_location_blank.png';
   static const String icoStar = 'assets/icons/ico_star.png';
+  static const String icoGuest = 'assets/icons/ico_guest.png';
+  static const String icoRoom = 'assets/icons/ico_room.png';
+  static const String icoDecre = 'assets/icons/ico_decre.png';
+  static const String icoIncre = 'assets/icons/ico_incre.png';
+  static const String icoWifi = 'assets/icons/ico_wifi.png';
+  static const String icoNonRefund = 'assets/icons/ico_non_refund.png';
+  static const String icoBreakfast = 'assets/icons/ico_breakfast.png';
+  static const String icoNonSmoke = 'assets/icons/ico_non_smoke.png';
+  static const String icoUser = 'assets/icons/ico_user.png';
+  static const String icoPromo = 'assets/icons/ico_promo.png';
 
   //Assets in images
   static const String backgroundSplash = 'assets/images/background_splash.png';
@@ -23,4 +33,7 @@ mixin AssetHelper {
   static const String hotel1 = 'assets/images/hotel1.png';
   static const String hotel2 = 'assets/images/hotel2.png';
   static const String hotel3 = 'assets/images/hotel3.png';
+  static const String room1 = 'assets/images/room1.png';
+  static const String room2 = 'assets/images/room2.png';
+  static const String room3 = 'assets/images/room3.png';
 }

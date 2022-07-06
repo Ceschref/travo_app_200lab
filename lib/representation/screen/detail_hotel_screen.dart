@@ -3,11 +3,13 @@ import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/core/helpers/image_helper.dart';
 import 'package:travo_app_source/data/model/hotel_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travo_app_source/representation/screen/rooms_screen.dart';
 import 'package:travo_app_source/representation/widgets/dash_line.dart';
 import 'package:travo_app_source/representation/widgets/item_button_widget.dart';
 
 import '../../core/constants/constants.dart';
 import '../../core/constants/textstyle_ext.dart';
+import '../widgets/item_utility_hotel.dart';
 
 class DetailHotelScreen extends StatefulWidget {
   static const String routeName = '/detail_hotel_screen';
@@ -186,6 +188,7 @@ class _DetailHotelScreenState extends State<DetailHotelScreen> {
                     Text(
                       '''You will find every comfort because many of the services that the hotel offers for travellers and of course the hotel is very comfortable.''',
                     ),
+                    ItemUtilityHotelWidget(),
                     SizedBox(
                       height: kDefaultPadding,
                     ),
@@ -209,7 +212,11 @@ class _DetailHotelScreenState extends State<DetailHotelScreen> {
                     SizedBox(
                       height: kMediumPadding,
                     ),
-                    ItemButtonWidget(data: 'Select Room'),
+                    ItemButtonWidget(
+                        data: 'Select Room',
+                        onTap: () {
+                          Navigator.of(context).pushNamed(RoomsScreen.routeName);
+                        }),
                     SizedBox(
                       height: kMediumPadding,
                     ),
