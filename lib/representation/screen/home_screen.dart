@@ -16,6 +16,27 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final List<Map<String, String>> listImageLeft = [
+    {
+      'name': 'Korea',
+      'image': AssetHelper.korea,
+    },
+    {
+      'name': 'Dubai',
+      'image': AssetHelper.dubai,
+    },
+  ];
+  final List<Map<String, String>> listImageRight = [
+    {
+      'name': 'Turkey',
+      'image': AssetHelper.turkey,
+    },
+    {
+      'name': 'Japan',
+      'image': AssetHelper.japan,
+    },
+  ];
+
   Widget _buildItemCategory(Widget icon, Color color, Function() onTap) {
     return GestureDetector(
       onTap: onTap,
@@ -25,6 +46,71 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: icon,
         decoration: BoxDecoration(color: color.withOpacity(0.2), borderRadius: BorderRadius.circular(kItemPadding)),
+      ),
+    );
+  }
+
+  Widget _buidlImageHomScreen(String name, String image) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).pushNamed(HotelBookingScreen.routeName, arguments: name);
+      },
+      child: Container(
+        margin: EdgeInsets.only(bottom: kDefaultPadding),
+        child: Stack(
+          alignment: Alignment.topRight,
+          children: [
+            ImageHelper.loadFromAsset(
+              image,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+              radius: BorderRadius.circular(kItemPadding),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(kDefaultPadding),
+              child: Icon(
+                Icons.favorite,
+                color: Colors.red,
+              ),
+            ),
+            Positioned(
+              left: kDefaultPadding,
+              bottom: kDefaultPadding,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    style: TextStyles.defaultStyle.whiteTextColor.bold,
+                  ),
+                  SizedBox(
+                    height: kItemPadding,
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(kMinPadding),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(kMinPadding),
+                      color: Colors.white.withOpacity(0.4),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Icon(
+                          Icons.star,
+                          color: Color(0xffFFC107),
+                        ),
+                        SizedBox(
+                          width: kItemPadding,
+                        ),
+                        Text('4.5')
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -153,7 +239,61 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ],
-          )
+          ),
+          SizedBox(
+            height: kMediumPadding,
+          ),
+          Row(
+            children: [
+              Text(
+                'Popular Destinations',
+                style: TextStyles.defaultStyle.bold,
+              ),
+              Spacer(),
+              Text(
+                'See All',
+                style: TextStyles.defaultStyle.bold.primaryTextColor,
+              ),
+            ],
+          ),
+          SizedBox(
+            height: kMediumPadding,
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      children: listImageLeft
+                          .map(
+                            (e) => _buidlImageHomScreen(
+                              e['name']!,
+                              e['image']!,
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
+                  SizedBox(
+                    width: kDefaultPadding,
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: listImageRight
+                          .map(
+                            (e) => _buidlImageHomScreen(
+                              e['name']!,
+                              e['image']!,
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

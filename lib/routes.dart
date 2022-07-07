@@ -14,7 +14,6 @@ import 'package:travo_app_source/representation/screen/select_date_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   IntroScreen.routeName: (context) => const IntroScreen(),
   MainApp.routeName: (context) => MainApp(),
-  HotelBookingScreen.routeName: (context) => HotelBookingScreen(),
   HotelsScreen.routeName: (context) => HotelsScreen(),
   SelectDateScreen.routeName: (context) => SelectDateScreen(),
   GuestAndRoomScreen.routeName: (context) => GuestAndRoomScreen(),
@@ -37,6 +36,15 @@ MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
         settings: settings,
         builder: (context) => CheckOutScreen(
           roomModel: roomModel,
+        ),
+      );
+
+    case HotelBookingScreen.routeName:
+      final String? destination = (settings.arguments as String?);
+      return MaterialPageRoute<dynamic>(
+        settings: settings,
+        builder: (context) => HotelBookingScreen(
+          destination: destination,
         ),
       );
     default:

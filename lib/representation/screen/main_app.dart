@@ -63,7 +63,7 @@ class _MainAppState extends State<MainApp> {
         ],
       ),
       body: IndexedStack(
-        index: 0,
+        index: _currentIndex,
         children: [
           HomeScreen(),
           Container(),
