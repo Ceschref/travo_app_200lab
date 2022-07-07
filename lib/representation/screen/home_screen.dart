@@ -37,15 +37,24 @@ class _HomeScreenState extends State<HomeScreen> {
     },
   ];
 
-  Widget _buildItemCategory(Widget icon, Color color, Function() onTap) {
+  Widget _buildItemCategory(Widget icon, Color color, Function() onTap, String title) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(
-          vertical: kMediumPadding,
-        ),
-        child: icon,
-        decoration: BoxDecoration(color: color.withOpacity(0.2), borderRadius: BorderRadius.circular(kItemPadding)),
+      child: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(
+              vertical: kMediumPadding,
+            ),
+            child: icon,
+            decoration: BoxDecoration(color: color.withOpacity(0.2), borderRadius: BorderRadius.circular(kItemPadding)),
+          ),
+          SizedBox(
+            height: kItemPadding,
+          ),
+          Text(title)
+        ],
       ),
     );
   }
@@ -212,6 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   () {
                     Navigator.of(context).pushNamed(HotelBookingScreen.routeName);
                   },
+                  'Hotels'
                 ),
               ),
               SizedBox(width: kDefaultPadding),
@@ -224,6 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Color(0xffF77777),
                   () {},
+                  'Flights'
                 ),
               ),
               SizedBox(width: kDefaultPadding),
@@ -236,6 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Color(0xff3EC8BC),
                   () {},
+                  'All'
                 ),
               ),
             ],
