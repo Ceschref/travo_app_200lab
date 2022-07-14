@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travo_app_source/core/constants/color_palatte.dart';
-
 import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/core/helpers/image_helper.dart';
 

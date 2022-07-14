@@ -119,7 +119,6 @@ class AppBarContainer extends StatelessWidget {
                     left: 0,
                     child: ImageHelper.loadFromAsset(
                       AssetHelper.icoOvalTop,
-                      tintColor: ColorPalette.shimmerBaseColor,
                     ),
                   ),
                   Positioned(
@@ -127,7 +126,6 @@ class AppBarContainer extends StatelessWidget {
                     right: 0,
                     child: ImageHelper.loadFromAsset(
                       AssetHelper.icoOvalBottom,
-                      tintColor: ColorPalette.shimmerBaseColor,
                     ),
                   ),
                 ],

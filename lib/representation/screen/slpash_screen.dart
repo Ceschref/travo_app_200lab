@@ -3,6 +3,7 @@ import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/core/helpers/image_helper.dart';
 import 'package:travo_app_source/core/helpers/local_storage_helper.dart';
 import 'package:travo_app_source/representation/screen/intro_screen.dart';
+import 'package:travo_app_source/representation/screen/main_app.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,13 +18,19 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+
     _routeToIntroScreen();
-    LocalStorageHelper.setValue('ignoreIntro', true);
   }
 
   void _routeToIntroScreen() async {
-    await Future.delayed(const Duration(milliseconds: 1000));
-    Navigator.of(context).pushNamed(IntroScreen.routeName);
+    final ignoreIntro = LocalStorageHelper.getValue('ignoreIntro') as bool?;
+    await Future.delayed(Duration(milliseconds: 1000));
+    if (ignoreIntro ?? false) {
+      Navigator.of(context).pushNamed(MainApp.routeName);
+    } else {
+      LocalStorageHelper.setValue('ignoreIntro', true);
+      Navigator.of(context).pushNamed(IntroScreen.routeName);
+    }
   }
 
   @override

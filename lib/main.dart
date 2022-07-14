@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:travo_app_source/core/constants/color_palatte.dart';
 import 'package:travo_app_source/core/helpers/local_storage_helper.dart';
 import 'package:travo_app_source/representation/screen/slpash_screen.dart';
@@ -6,13 +7,20 @@ import 'package:travo_app_source/routes.dart';
 
 import 'core/helpers/size_config.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await LocalStorageHelper.initLocalStorageHelper();
   runApp(const TravoApp());
 }
 
-class TravoApp extends StatelessWidget {
+class TravoApp extends StatefulWidget {
   const TravoApp({Key? key}) : super(key: key);
 
+  @override
+  State<TravoApp> createState() => _TravoAppState();
+}
+
+class _TravoAppState extends State<TravoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,8 +36,7 @@ class TravoApp extends StatelessWidget {
       home: Builder(
         builder: (context) {
           SizeConfig.init(context);
-          final ignoreIntro = LocalStorageHelper.getValue('ignoreIntro') as bool?;
-          return const SplashScreen();
+          return SplashScreen();
         },
       ),
     );

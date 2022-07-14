@@ -45,13 +45,8 @@ extension ExtendedTextStyle on TextStyle {
     return copyWith(fontWeight: FontWeight.w700);
   }
 
-  // define text's color
   TextStyle get text1Color {
     return copyWith(color: ColorPalette.text1Color);
-  }
-
-  TextStyle get textErrorColor {
-    return copyWith(color: ColorPalette.textErrorColor);
   }
 
   TextStyle get primaryTextColor {

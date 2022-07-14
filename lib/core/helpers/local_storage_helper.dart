@@ -9,6 +9,10 @@ class LocalStorageHelper {
 
   Box<dynamic>? hiveBox;
 
+  static initLocalStorageHelper() async {
+    _shared.hiveBox = await Hive.openBox('TravolApp');
+  }
+
   static dynamic getValue(String key) {
     return _shared.hiveBox?.get(key);
   }
