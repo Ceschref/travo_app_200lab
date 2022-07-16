@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'color_palatte.dart';
 
 extension ExtendedTextStyle on TextStyle {
-  // define text's font weight
   TextStyle get light {
     return copyWith(fontWeight: FontWeight.w300);
   }

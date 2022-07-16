@@ -6,7 +6,7 @@ import 'package:travo_app_source/representation/screen/hotel_booking_screen.dart
 import 'package:travo_app_source/representation/widgets/app_bar_container.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/constants/dimension_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

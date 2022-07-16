@@ -3,7 +3,7 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:travo_app_source/core/constants/color_palatte.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/constants/dimension_constants.dart';
 import 'home_screen.dart';
 
 class MainApp extends StatefulWidget {

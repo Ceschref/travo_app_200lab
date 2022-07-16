@@ -7,7 +7,7 @@ import 'package:travo_app_source/representation/screen/rooms_screen.dart';
 import 'package:travo_app_source/representation/widgets/dash_line.dart';
 import 'package:travo_app_source/representation/widgets/item_button_widget.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/constants/dimension_constants.dart';
 import '../../core/constants/textstyle_ext.dart';
 import '../widgets/item_utility_hotel.dart';
 

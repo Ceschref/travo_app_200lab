@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travo_app_source/core/constants/color_palatte.dart';
-import 'package:travo_app_source/core/constants/constants.dart';
+import 'package:travo_app_source/core/constants/dimension_constants.dart';
 
 class DashLineWidget extends StatelessWidget {
   const DashLineWidget({Key? key, this.height = 1, this.color = ColorPalette.dividerColor}) : super(key: key);

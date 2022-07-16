@@ -9,18 +9,6 @@ class ColorPalette {
   static const Color text1Color = Color(0xFF323B4B);
   static const Color subTitleColor = Color(0xFF838383);
   static const Color backgroundScaffoldColor = Color(0xFFF2F2F2);
-
-  static const List<Color> collectionColor = [
-    Color(0xFFFBBF24),
-    Color(0xFFF43F5E),
-    Color(0xFF0EA5E9),
-    Color(0xFF8B5CF6),
-    Color(0xFFF97316),
-    Color(0xFF10B981),
-    Color(0xFF06B6D4),
-    Color(0xFFEF4444),
-    Color(0xFFEC4899),
-  ];
 }
 
 class Gradients {

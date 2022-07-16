@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/core/helpers/image_helper.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/constants/dimension_constants.dart';
 
 class ItemChangeGuestAndRoom extends StatefulWidget {
   const ItemChangeGuestAndRoom({Key? key, this.initData = 0, required this.icon, required this.value})

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travo_app_source/core/constants/constants.dart';
+import 'package:travo_app_source/core/constants/dimension_constants.dart';
 import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/representation/screen/guest_and_room_screen.dart';
 import 'package:travo_app_source/representation/screen/hotels_screen.dart';

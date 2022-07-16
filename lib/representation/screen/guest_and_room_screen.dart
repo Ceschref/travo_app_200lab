@@ -3,7 +3,7 @@ import 'package:travo_app_source/core/helpers/asset_helper.dart';
 import 'package:travo_app_source/representation/widgets/app_bar_container.dart';
 import 'package:travo_app_source/representation/widgets/item_change_guest_and_room.dart';
 
-import '../../core/constants/constants.dart';
+import '../../core/constants/dimension_constants.dart';
 import '../widgets/item_button_widget.dart';
 
 class GuestAndRoomScreen extends StatefulWidget {

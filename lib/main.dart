@@ -13,20 +13,14 @@ void main() async {
   runApp(const TravoApp());
 }
 
-class TravoApp extends StatefulWidget {
+class TravoApp extends StatelessWidget {
   const TravoApp({Key? key}) : super(key: key);
-
-  @override
-  State<TravoApp> createState() => _TravoAppState();
-}
-
-class _TravoAppState extends State<TravoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Travo App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: ColorPalette.primaryColor,
         scaffoldBackgroundColor: ColorPalette.backgroundScaffoldColor,
         backgroundColor: ColorPalette.backgroundScaffoldColor,
       ),
