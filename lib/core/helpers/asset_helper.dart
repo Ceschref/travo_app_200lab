@@ -36,7 +36,7 @@ mixin AssetHelper {
   static const String room1 = 'assets/images/room1.png';
   static const String room2 = 'assets/images/room2.png';
   static const String room3 = 'assets/images/room3.png';
-  static const String korea = 'assets/images/koreaa.png';
+  static const String korea = 'assets/images/korea.png';
   static const String turkey = 'assets/images/turkey.png';
   static const String japan = 'assets/images/japan.png';
   static const String dubai = 'assets/images/dubai.png';

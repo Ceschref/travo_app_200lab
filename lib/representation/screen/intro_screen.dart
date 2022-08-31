@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:travo_app_source/core/constants/dimension_constants.dart';
 import 'package:travo_app_source/core/constants/textstyle_ext.dart';
@@ -30,27 +29,6 @@ class _IntroScreenState extends State<IntroScreen> {
       _streamController.add(_pageController.page!.toInt());
     });
   }
-
-  final List<PageViewModel> listPages = [
-    PageViewModel(
-      title: "Title of first page",
-      body: "Here you can write the description of the page, to explain someting...",
-      image: const Center(child: Icon(Icons.android)),
-      decoration: const PageDecoration(
-        titleTextStyle: TextStyle(color: Colors.orange),
-        bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
-      ),
-    ),
-    PageViewModel(
-      title: "Title of first page",
-      body: "Here you can write the description of the page, to explain someting...",
-      image: const Center(child: Icon(Icons.android)),
-      decoration: const PageDecoration(
-        titleTextStyle: TextStyle(color: Colors.orange),
-        bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
-      ),
-    ),
-  ];
 
   final List<Widget> listPage = [
     ItemIntroWidget(
